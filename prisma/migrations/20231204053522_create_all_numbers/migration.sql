@@ -1,0 +1,21 @@
+-- CreateTable
+CREATE TABLE `Numbers` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `UnInt` INTEGER UNSIGNED NOT NULL,
+    `BigInt` BIGINT NOT NULL,
+    `UnbigInt` BIGINT UNSIGNED NOT NULL,
+    `SmalInt` SMALLINT NOT NULL,
+    `UnSmalInt` SMALLINT UNSIGNED NOT NULL,
+    `MedInt` MEDIUMINT NOT NULL,
+    `UnMedInt` MEDIUMINT UNSIGNED NOT NULL,
+    `TinInt` TINYINT NOT NULL,
+    `UnTinInt` TINYINT UNSIGNED NOT NULL,
+    `Dec` DECIMAL(65, 30) NOT NULL,
+    `Float` DOUBLE NOT NULL,
+    `Doub` FLOAT NOT NULL,
+    `BigIntDef` BIGINT NOT NULL DEFAULT 150,
+    `BigIntInq` BIGINT NOT NULL,
+
+    UNIQUE INDEX `Numbers_BigIntInq_key`(`BigIntInq`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
