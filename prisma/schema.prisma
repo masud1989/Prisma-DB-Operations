@@ -86,3 +86,12 @@ model Bool {
   bool Boolean @default(true) 
   char String @db.Char(100) @default("Prisma Example")
 }
+
+// Blob 
+model blob {
+   id Int @id @default(autoincrement())
+   Blob Bytes @db.Blob
+   Tin Bytes @db.TinyBlob
+   Med Bytes @db.MediumBlob
+   Long Bytes @db.LongBlob
+}
