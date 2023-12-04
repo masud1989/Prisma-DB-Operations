@@ -79,3 +79,10 @@ model DateTimeField {
   DateTime4 DateTime @db.Date
   DateTime5 DateTime @db.Time
 }
+
+// Boolean and Char 
+model Bool {
+  id Int @id @default(autoincrement())
+  bool Boolean @default(true) 
+  char String @db.Char(100) @default("Prisma Example")
+}
