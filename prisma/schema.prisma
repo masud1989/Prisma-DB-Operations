@@ -69,3 +69,13 @@ model Text {
   textMed String @db.MediumText
   textLon String @db.LongText
 }
+
+// Date Time 
+model DateTimeField {
+  id Int @id @default(autoincrement())
+  DateTime1 DateTime
+  DateTime2 DateTime @db.DateTime
+  DateTime3 DateTime @db.Timestamp
+  DateTime4 DateTime @db.Date
+  DateTime5 DateTime @db.Time
+}
