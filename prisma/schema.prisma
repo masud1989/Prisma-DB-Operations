@@ -29,6 +29,17 @@ model User {
   name String
   address String
   phone String
+  profile Profile?
+}
+
+//Profile 
+model Profile {
+  id Int @id @default(autoincrement())
+  fName String 
+  lName String 
+  country String @default("Bangladesh")
+  userId Int @unique
+  user User @relation(fields: [userId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
 
 // Number Model
