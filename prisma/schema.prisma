@@ -11,11 +11,21 @@ datasource db {
 }
 
 
+// Enam  
+  enum userType {
+  Super_Admin
+  Admin 
+  User
+  Viewer
+  Desk_Office
+}
 
-//Use  Model
+//User  Model
 model User {
   id Int @id @default(autoincrement())
+  userRole userType
   email String @unique
+  password String @default("Password")
   name String
   address String
   phone String
