@@ -12,7 +12,7 @@ datasource db {
 
 
 
-// Models 
+//Use  Model
 model User {
   id Int @id @default(autoincrement())
   email String @unique
@@ -21,6 +21,7 @@ model User {
   phone String
 }
 
+// Number Model
 model Numbers {
   id Int @id @default(autoincrement())
   UnInt Int@db.UnsignedInt
@@ -44,4 +45,17 @@ model Numbers {
 
   BigIntDef BigInt @default(150)
   BigIntInq BigInt @unique
+}
+
+//Text Model
+model Text {
+  id Int @id @default(autoincrement())
+  text String
+  text1 String?
+  textDef String @default("Bangladesh")
+  textLen String @db.VarChar(1500)
+  textTin String @db.TinyText
+  textOnly String @db.Text
+  textMed String @db.MediumText
+  textLon String @db.LongText
 }
